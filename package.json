@@ -1,0 +1,37 @@
+{
+  "name": "@hakochest/ciallo",
+  "version": "0.7.21",
+  "description": "A simple NPM package for practicing package publishing and maintenance. Outputs 'ciallo' to the console.",
+  "main": "index.js",
+  "module": "dist/ciallo.js",
+  "types": "dist/ciallo.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "hakochest",
+    "ciallo",
+    "demo",
+    "practice",
+    "typescript",
+    "console",
+    "simple"
+  ],
+  "author": "HakoChest",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Islatri/hakochest-ciallo"
+  },
+  "bugs": {
+    "url": "https://github.com/Islatri/hakochest-ciallo/issues"
+  },
+  "homepage": "https://github.com/Islatri/hakochest-ciallo#readme",
+  "publishConfig": {
+    "access": "public"
+  },
+  "devDependencies": {
+    "typescript": "^5.9.2"
+  }
+}

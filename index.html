@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@hakochest/ciallo 包创建指南</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f8f9fa;
+        }
+        h1, h2 {
+            color: #2c3e50;
+        }
+        h1 {
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+        }
+        pre {
+            background-color: #f1f8ff;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+            border-left: 4px solid #3498db;
+        }
+        code {
+            background-color: #f1f8ff;
+            padding: 2px 5px;
+            border-radius: 3px;
+            font-family: 'Fira Code', monospace;
+        }
+        .container {
+            background-color: white;
+            border-radius: 8px;
+            padding: 25px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        .step {
+            margin-bottom: 30px;
+        }
+        .file-structure {
+            background-color: #272822;
+            color: #f8f8f2;
+            padding: 15px;
+            border-radius: 5px;
+            font-family: 'Fira Code', monospace;
+        }
+        .keyword {
+            color: #f92672;
+        }
+        .function {
+            color: #a6e22e;
+        }
+        .string {
+            color: #e6db74;
+        }
+        .comment {
+            color: #75715e;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>创建 NPM 包: @hakochest/ciallo</h1>
+        
+        <div class="step">
+            <h2>1. 创建项目结构</h2>
+            <p>首先创建项目目录并初始化：</p>
+            <pre><code>mkdir ciallo-package
+cd ciallo-package
+npm init --scope=hakochest</code></pre>
+        </div>
+
+        <div class="step">
+            <h2>2. 项目文件结构</h2>
+            <div class="file-structure">
+                ciallo-package/<br>
+                ├── <span class="keyword">package</span>.json<br>
+                ├── <span class="keyword">index</span>.js<br>
+                ├── README.md<br>
+                └── .gitignore
+            </div>
+        </div>
+
+        <div class="step">
+            <h2>3. package.json 配置</h2>
+            <pre><code>{
+  "name": "@hakochest/ciallo",
+  "version": "1.0.0",
+  "description": "A simple npm package that outputs 'ciallo'",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": ["ciallo", "demo", "practice"],
+  "author": "Your Name",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-username/ciallo-package"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}</code></pre>
+        </div>
+
+        <div class="step">
+            <h2>4. 核心代码 (index.js)</h2>
+            <pre><code><span class="comment">/**
+ * 输出 'ciallo' 到控制台
+ * @returns {void}
+ */</span>
+<span class="function">function</span> <span class="keyword">ciallo</span>() {
+    console.log(<span class="string">'ciallo'</span>);
+}
+
+module.exports = ciallo;</code></pre>
+        </div>
+
+        <div class="step">
+            <h2>5. 创建 README.md</h2>
+            <pre><code># @hakochest/ciallo
+
+一个简单的 NPM 包，用于练习包的发布与维护。
+
+## 安装
+
+```bash
+npm install @hakochest/ciallo
+```
+
+## 使用
+
+```javascript
+const ciallo = require('@hakochest/ciallo');
+
+ciallo(); // 输出: ciallo
+```
+
+## API
+
+### ciallo()
+
+调用后在控制台输出 "ciallo"。</code></pre>
+        </div>
+
+        <div class="step">
+            <h2>6. 发布到 NPM</h2>
+            <p>首先登录到 npm：</p>
+            <pre><code>npm login</code></pre>
+            <p>然后发布包：</p>
+            <pre><code>npm publish</code></pre>
+            <p>注意：确保包名在 npm 上是唯一的，并且你已经登录了有权限发布到 @hakochest 命名空间的账户。</p>
+        </div>
+
+        <div class="step">
+            <h2>7. 使用示例</h2>
+            <pre><code><span class="comment">// 安装后使用示例</span>
+const ciallo = require('@hakochest/ciallo');
+
+<span class="comment">// 调用函数</span>
+ciallo(); <span class="comment">// 控制台输出: "ciallo"</span>
+
+<span class="comment">// 也可以直接使用</span>
+require('@hakochest/ciallo')(); <span class="comment">// 控制台输出: "ciallo"</span></code></pre>
+        </div>
+
+        <div class="step">
+            <h2>8. 更新版本</h2>
+            <p>当你需要更新包时：</p>
+            <pre><code>npm version patch  # 修复bug，小版本更新
+npm version minor  # 新增功能，中版本更新
+npm version major  # 重大变更，大版本更新</code></pre>
+            <p>然后再次发布：</p>
+            <pre><code>npm publish</code></pre>
+        </div>
+    </div>
+
+    <script>
+        // 演示功能
+        function ciallo() {
+            console.log('ciallo');
+            alert('ciallo');
+        }
+        
+        // 页面加载完成后添加演示按钮
+        document.addEventListener('DOMContentLoaded', function() {
+            const demoButton = document.createElement('button');
+            demoButton.textContent = '演示 ciallo() 功能';
+            demoButton.style = `
+                display: block;
+                margin: 20px auto;
+                padding: 10px 20px;
+                background-color: #3498db;
+                color: white;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                font-size: 16px;
+            `;
+            demoButton.onclick = ciallo;
+            
+            document.querySelector('.container').appendChild(demoButton);
+        });
+    </script>
+</body>
+</html>
