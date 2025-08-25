@@ -1,8 +1,9 @@
 {
   "name": "@hakochest/ciallo",
-  "version": "0.72.1",
+  "version": "0.721.0",
   "description": "A simple NPM package for practicing package publishing and maintenance. Outputs 'Ciallo～(∠・ω< )⌒☆' to the console.",
   "main": "index.js",
+  "type": "module",
   "module": "dist/ciallo.js",
   "types": "dist/ciallo.d.ts",
   "scripts": {
