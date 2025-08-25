@@ -1,4 +1,4 @@
 // TypeScript version of ciallo
 export default function ciallo(): void {
-  console.log('ciallo');
+  console.log('Ciallo～(∠・ω< )⌒☆');
 }

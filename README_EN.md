@@ -1,7 +1,7 @@
 
 # @hakochest/ciallo
 
-A simple NPM package for practicing package publishing and maintenance. Outputs "ciallo" to the console.
+A simple NPM package for practicing package publishing and maintenance. Outputs "Ciallo～(∠・ω< )⌒☆" to the console.
 
 ## Installation
 
@@ -15,26 +15,26 @@ npm install @hakochest/ciallo
 
 ```javascript
 const ciallo = require('@hakochest/ciallo');
-ciallo(); // Output: ciallo
+ciallo(); // Output: Ciallo～(∠・ω< )⌒☆
 ```
 
 ### ES Module
 
 ```js
 import ciallo from '@hakochest/ciallo';
-ciallo(); // Output: ciallo
+ciallo(); // Output: Ciallo～(∠・ω< )⌒☆
 ```
 
 ## API
 
 ### ciallo()
 
-Outputs "ciallo" to the console.
+Outputs "Ciallo～(∠・ω< )⌒☆" to the console.
 
 #### Example
 
 ```js
-ciallo(); // Output: ciallo
+ciallo(); // Output: Ciallo～(∠・ω< )⌒☆
 ```
 
 ## Features

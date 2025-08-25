@@ -1,7 +1,7 @@
 
 # @hakochest/ciallo
 
-一个简单的 NPM 包，用于练习包的发布与维护。输出 "ciallo" 到控制台。
+一个简单的 NPM 包，用于练习包的发布与维护。输出 "Ciallo～(∠・ω< )⌒☆" 到控制台。
 
 ## 安装
 
@@ -15,26 +15,26 @@ npm install @hakochest/ciallo
 
 ```javascript
 const ciallo = require('@hakochest/ciallo');
-ciallo(); // 输出: ciallo
+ciallo(); // 输出: Ciallo～(∠・ω< )⌒☆
 ```
 
 ### ES Module
 
 ```js
 import ciallo from '@hakochest/ciallo';
-ciallo(); // 输出: ciallo
+ciallo(); // 输出: Ciallo～(∠・ω< )⌒☆
 ```
 
 ## API
 
 ### ciallo()
 
-调用后在控制台输出 "ciallo"。
+调用后在控制台输出 "Ciallo～(∠・ω< )⌒☆"。
 
 #### 示例
 
 ```js
-ciallo(); // 输出: ciallo
+ciallo(); // 输出: Ciallo～(∠・ω< )⌒☆
 ```
 
 ## 特性
